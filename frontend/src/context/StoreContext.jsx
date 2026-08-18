@@ -4,6 +4,7 @@ import { food_list } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+    const url=  "https://moxb-backend.onrender.com"
     const [cartItems, setCartItems] = useState({});
 
     const addToCart = (itemId) => {
