@@ -1,0 +1,35 @@
+.header{
+    height: 34vw;
+    color: white;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.header-content{
+    max-width: 50%;
+    text-align: center;
+    animation: fadeIn 1s ease;
+    font-size: 20px;
+}
+.header-content h2{
+    font-size: 4vw;
+    color: #fff;
+}
+@media (max-width:1050px){
+    .header-content{
+        max-width: 70%;
+    }
+}   
+@media (max-width:750px){
+    .header-content h2{
+        font-size: 7vw;
+    }
+    .header-content p{
+        font-size: 2.5vw;
+    }
+}
+

@@ -1,0 +1,201 @@
+/* add.css */
+
+.add {
+  width: 100%;
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form styling */
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  gap: 25px;
+}
+
+form div {
+  gap: 10px;
+}
+
+form p {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+/* Image Upload Section */
+.add-img-upload {
+  border: 2px dashed #ddd;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+}
+
+.add-img-upload:hover {
+  border-color: #ff6b6b;
+  background: #fff5f5;
+}
+
+.add-img-upload img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.add-img-upload:hover img {
+  opacity: 1;
+}
+
+.add-img-upload p {
+  color: #666;
+  margin: 10px 0 0 0;
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="file"],
+select {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+input[type="text"]:focus,
+select:focus {
+  outline: none;
+  border-color: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.1);
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+}
+
+/* Product Details Section */
+.add-product-details {
+  gap: 15px;
+}
+
+.add-product-details input {
+  width: 100%;
+}
+
+/* Category Section */
+.add-price-category {
+  gap: 10px;
+}
+
+.add-price-category select {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.add-price-category select:hover {
+  border-color: #ff6b6b;
+}
+
+/* Price Section */
+.add-price {
+  gap: 10px;
+}
+
+.add-price input {
+  width: 100%;
+}
+
+/* Button */
+.add-btn {
+  padding: 14px 40px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.add-btn:hover {
+  background: #ff5252;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+  transform: translateY(-2px);
+}
+
+.add-btn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(255, 107, 107, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add {
+    margin: 20px;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  .add-img-upload {
+    padding: 20px;
+  }
+
+  .add-img-upload img {
+    width: 50px;
+    height: 50px;
+  }
+
+  form {
+    gap: 15px;
+  }
+
+  .add-btn {
+    padding: 12px 30px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .add {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  form p {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  select {
+    padding: 10px 12px;
+    font-size: 13px;
+  }
+
+  .add-btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
