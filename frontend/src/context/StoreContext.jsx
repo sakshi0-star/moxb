@@ -5,7 +5,11 @@ import { food_list as initialFoodList } from "../assets/assets";
 export const StoreContext = createContext(null);
 
 const StoreContextProvider = (props) => {
+<<<<<<< HEAD
     const url = "http://localhost:4000";
+=======
+    const url=  "https://moxb-backend.onrender.com"
+>>>>>>> 0363538820ad4ffbbd520723164840cf91baf21e
     const [cartItems, setCartItems] = useState({});
     const [token, setToken] = useState("");
     const [food_list, setFoodList] = useState(initialFoodList);
