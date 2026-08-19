@@ -1,0 +1,80 @@
+.place-order {
+  display: flex;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.place-order-left {
+  flex: 1;
+}
+
+.place-order-left p.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.place-order-left input {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #c5c5c5;
+  border-radius: 4px;
+  font-family: Outfit;
+}
+
+.place-order-left .multi-fields {
+  display: flex;
+  gap: 15px;
+}
+
+.place-order-left .multi-fields input {
+  flex: 1;
+}
+
+.place-order-right {
+  flex: 1;
+}
+
+.cart-total {
+  flex: 1;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.cart-total h2 {
+  margin-bottom: 30px;
+}
+
+.cart-total-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.cart-total button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 30px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.cart-total button:hover {
+  background: #e55555;
+}
+
+@media (max-width: 768px) {
+  .place-order {
+    flex-direction: column;
+    gap: 30px;
+  }
+}

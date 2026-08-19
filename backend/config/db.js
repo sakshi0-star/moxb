@@ -1,13 +1,13 @@
-import mongoose from 'mongoose'
+import mongoose from "mongoose";
 
 const connectDB = async () => {
-    try {
-        await mongoose.connect("mongodb+srv://sakshimishra21062002_db_user:yhV07BTpQdnBCjvP@cluster0.amiqssg.mongodb.net/")
-        console.log("✅ MongoDB connected successfully")
-    } catch (error) {
-        console.log("❌ MongoDB connection error:", error.message)
-        process.exit(1)
-    }
-}
+  try {
+    const conn = await mongoose.connect("mongodb+srv://sakshimishra21062002_db_user:yhV07BTpQdnBCjvP@cluster0.amiqssg.mongodb.net/");
 
-export default connectDB
+    console.log(`MongoDB connected: ${conn.connection.host}`);
+  } catch (error) {
+    console.log(`MongoDB Connection error: ${error.message}`);
+  }
+};
+
+export default connectDB;

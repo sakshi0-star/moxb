@@ -1,27 +1,24 @@
-import express from 'express'
-import cors from 'cors'
-import connectDB from './config/db.js'
-import foodRouter from './routes/foodroute.js'
-import userRouter from './routes/userRoutes.js'  // ← Check this import
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+import connectDB from "./config/db.js";
+import foodRouter from "./routes/foodroute.js";
+import userRouter from "./routes/userRoutes.js";
+import cartRouter from "./routes/cartRoutes.js";
+// import orderRouter from "./routes/orderRoutes.js"; // ← REMOVE THIS or create the file
 
-const app = express()
+dotenv.config();
+connectDB();
 
-// Connect to MongoDB
-connectDB()
+const app = express();
 
-// Middleware
-app.use(cors())
-app.use(express.json())
-app.use(express.urlencoded({ limit: "16mb", extended: true }))
+app.use(express.json());
+app.use(cors());
 
-// Routes
-app.use('/api/food', foodRouter)
-app.use('/api/user', userRouter)  // ← Check this line
-app.use('/uploads', express.static('uploads'))
+app.use("/api/food", foodRouter);
+app.use("/api/user", userRouter);
+app.use("/api/cart", cartRouter);
+// app.use("/api/order", orderRouter); // ← REMOVE THIS or add the route
 
-const PORT = 4000
-app.listen(PORT, () => {
-    console.log(`✅ Server running on http://localhost:${PORT}`)
-})
-
-export default app
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
