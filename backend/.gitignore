@@ -1,26 +1,8 @@
-# Environment variables
+# .gitignore file content
 .env
 .env.local
 .env.*.local
-
-# Dependencies
 node_modules/
-
-# Logs
-*.log
-npm-debug.log*
-
-# Uploads
 uploads/
-
-# IDE
-.vscode/
-.idea/
-
-# OS
 .DS_Store
-Thumbs.db
-
-# Build
-dist/
-build/
+*.log
